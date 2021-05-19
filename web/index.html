@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%-- Programa que retorna informações do lado servidor --%>
+        <h3>Teste JSP - scriptlet e comentários</h3>
+        <%
+            // Declaração das variáveis que receberão os dados:
+            String diretorio, protocolo;
+            /* O diretório do site e o nome do protocolo de navegação,
+             * seráo atrituidos inicialmente às variáveis que são 
+             * do tipo String. Depois estes dados serão retornado para 
+             * o cliente HTML através do método println da objeto out.
+             */
+            diretorio = request.getContextPath();
+            protocolo = request.getProtocol();
+            out.print("<pre>");
+            out.println("Path do contexto (diretório do site): " + diretorio);
+            out.println("Protocolo utilizado para navegacao..: " + protocolo);
+            out.print("</pre>");
+        %>
+    </body>
+</html>
